@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;1,500&family=Raleway:ital,wght@0,100;0,300;1,400;1,500;1,600&display=swap');
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;
+
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+
+
+.body{
+    background-color:rgb(114, 70, 70);
+    
+    
+}
+section{
+    
+    padding: 3.5rem 3%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Navbar (Masaüstü İçin) */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Butonlar */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Menü İkonu (Sadece Mobilde Gösterilecek) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Mobil Ekranda Navbar'ı Düzenleme */
+@media screen and (max-width: 768px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    .header a{
+        display: none;
+    }
+
+    /* Navbar başlangıçta gizlenecek */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #444;
+        text-align: center;
+        padding: 10px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 9rem;
+    }
+
+    /* Navbar içindeki öğeleri dikey sırala */
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar li {
+        width: 100%;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 12px;
+        width: 100%;
+        color: white;
+    }
+
+    /* Menü İkonunu Göster */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Navbar Açıkken Görünecek */
+    .navbar.active {
+        display: flex;
+    }
+
+    /* Logo ve Butonlar Küçülerek Ekrana Sığsın */
+    .logo img {
+        height: 40px;
+    }
+
+    .buttons {
+        display: none;
+        
+    }
+    .menu a{
+       width: auto;
+       height: auto;
+        font-size: 0.5rem;
+        font-weight: bold;
+        color: #f8f8f8;
+        background-color: rgb(12, 11, 11);
+        cursor: pointer;
+    }
+}
+
+
+
+.home{
+    min-height: 100vh;
+    background: url(images/hmbr.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14rem;
+    display: flex;
+    align-items: center;
+}
+.home a{
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 3rem;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f8f8;
+    background-color: rgb(12, 11, 11);
+    cursor: pointer;
+}
+.home .content{
+    max-width: 60rem;
+}
+.home .content h3{
+    font-size: 7rem;
+    color: #000000;
+
+}
+.home .content p{
+    font-size: 2rem;
+    line-height: 1.8rem;
+    padding: 1rem 0;
+    color: #3d3939;
+}
+#discount-timer{
+   padding-top: 0.7rem;
+    position: absolute;
+    right: 30px;
+}
+#discount-timer p
+{
+    font-size: 3rem;
+    color: #000000;
+}
+
+
+
+.menugrıd .menu .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    background-color: white;
+    cursor: pointer;
+}
+
+.menu h1{
+    font-weight: bolder;
+    color: #faf7f7;
+    margin-left:1.4rem ;
+    margin-bottom:2rem;
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+  
+
+}
+.menu .box-container .box{
+    padding: 2.4rem;
+    background-color: #ffffff;
+    border: 3rem;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 2rem;
+
+}
+
+.menu .box-container .box img{
+    width: 100%;
+    min-height: 320px;
+    object-fit: cover;
+    border-radius: 1rem;
+    padding-bottom: 2.5rem;
+}
+.menu .box-container .box .menu-kategori{
+    
+    font-size: 2.1rem;
+    font-weight: bold;      
+    
+}
+.menu .box-container .box .box-head .urunaciklama{
+    font-size: 1.8rem;
+}
+.menu a{
+    margin-top: 5rem;
+    margin-left: 3rem;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f8f8;
+    background-color: rgb(12, 11, 11);
+    cursor: pointer;
+}
+.s-container{
+    
+    min-width: 100%;
+    height: auto;
+    background-color: rgb(238, 255, 6);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 0rem;
+    
+}
+.s-container{
+    
+    justify-content: center;
+}
+.carousel-caption h2{
+    margin-bottom: -1rem;
+    font-size: 2.4rem;
+    color: black;
+    font-weight: bold;
+}
+.carousel-caption p{
+    padding-top: 0.2rem;
+    margin-bottom: -1rem;
+    color: #000000;
+    font-size: 2rem;
+    
+}
+
+
+
+#carouselExampleCaptions img{
+    aspect-ratio: 4/3;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border: solid 0.8rem #7c4a4a;
+    border-radius: 3rem;
+    padding: 0;
+    
+}
+.s-container h1{
+    font-weight: bold;
+    font-size:3vw;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+}
+.s-container span{
+    
+    font-size:1.5vw;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+}
+.slider-container .box-bottom .btn{
+    
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 3rem;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;
+    background-color: rgb(252, 248, 248);
+    cursor: pointer;
+
+}
+.slider-container .carousel-item .btn{
+    
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 3rem;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000000;
+    background-color: rgb(252, 248, 248);
+    cursor: pointer;
+}
+
+
+footer {
+    
+    color: #ffffff;
+}
+.footer-top{
+    
+    height: auto;
+    width: auto;
+}
+ul {
+    padding: 0px;
+}
+ol, ul {
+    margin-bottom: 0px;
+}
+
+.social-icon {
+    padding: 0;
+    margin-bottom: 0px;
+        float: right;
+}
+
+.social-icon li {
+    list-style: none;
+    display: inline-block;
+    font-size: 4px;
+}
+.social-icon li i {
+    font-size: 4px;
+    color: #262725;
+    border: solid 2px #ffffff;
+    height: 0.5rem;
+    width: 0.5rem;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 100px;
+    line-height: 27px;
+    margin-right: 15px;
+    transition: 1s;
+    background: #fff;
+}
+.social-icon li i:hover {
+    border: solid 2px #262725;
+    color: #ffffff;
+    background: #262725;
+}
+
+.phone-no i {
+    position: relative;
+    margin-right: 14px;
+    font-size: 2rem;
+    top: 0.1rem;
+}
+.phone-no a{
+    position: relative;
+    margin-right: 14px;
+    font-size: 5rem;
+    top: 5px;
+}
+.phone-no {
+    
+    text-align: right;
+}
+.footer-day-time {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #7a6f6f;
+    padding-top: 0.2rem;
+    margin-bottom: 1rem;
+}
+.footer-day-time ul li {
+    display: inline;
+    margin-right: 20px;
+}
+.footer-day-time ul li:last-child {
+    margin-right: 0px;
+}
+.phone-no a {
+    color: #fff;
+    font-family: PlayfairDisplay-Black;
+    font-size: 0.3rem;
+    font-weight: bold;
+}
+.footer-top {
+    background: #2f2f2f;
+    padding:1rem 0 1rem;
+}
+.footer-top h4 {
+    font-size: 19px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.footer-top p {
+    font-size: 13px;
+    line-height: 2;
+}
+
+footer p {
+  margin-bottom:0;
+}
+.footer-logo {
+    display: block;
+    margin-bottom: 32px;
+}
+.address1 li {
+    list-style: none;
+    position: relative;
+    padding: 0px 0 14px 34px;
+    line-height: 26px;
+}
+ul.address1 span {
+    position: absolute;
+    width: 40px;
+    max-width: 40px;
+    left: 0;
+}
+.address1 li a {
+    color: #fff;
+    text-decoration: none;
+}
+ul.address1 i {
+    width: 20px;
+    position: absolute;
+    left: 0px;
+    text-align: center;
+    font-size: 28px;
+    top: 0;
+}
+
+ul.address1 i.fa-envelope {
+    font-size: 18px;
+    top: 4px;
+}
+footer ul.social-icon {
+    float: left;
+}
+footer .social-icon li i:hover {
+    background: #4b8800;
+    border-color: #4b8800;
+}
+
+.footer-bottom {
+    background: #4b8800;
+    padding: 10px 0px;
+}
+.footer-bottom ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 18px;
+}
+.footer-bottom ul li a{
+    color:#fff;
+}
+
+.footer-bottom ul {
+    float: right;
+}
+
+.footer-bottom ul li:last-child {
+    margin-right: 0;
+}
+.copyright {
+    font-size: 18px;
+}
+.btn{
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 3rem;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f8f8f8;
+    background-color: rgb(12, 11, 11);
+    cursor: pointer;
+}
+
+
+
+
+
+  
+  
+
+
+
+
+
+
